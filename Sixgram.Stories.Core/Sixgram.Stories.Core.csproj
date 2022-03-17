@@ -5,8 +5,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Dto" />
-      <Folder Include="Services" />
+      <PackageReference Include="AutoMapper" Version="11.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Sixgram.Stories.Database\Sixgram.Stories.Database.csproj" />
     </ItemGroup>
 
 </Project>
