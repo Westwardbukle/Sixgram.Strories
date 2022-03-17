@@ -29,12 +29,19 @@ namespace Sixgram.Stories.Database.Migrations
                         .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("Description")
-                        .HasColumnType("text");
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<Guid>("FileId")
+                        .HasColumnType("uuid");
 
                     b.Property<Guid>("Name")
+                        .HasMaxLength(50)
                         .HasColumnType("uuid");
 
                     b.Property<Guid>("UserId")
+                        .HasMaxLength(50)
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");

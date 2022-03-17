@@ -8,6 +8,7 @@ namespace Sixgram.Stories.Database.Models
         public Guid Name { get; set; }
         public Guid UserId { get; set; }
         public string Description { get; set; }
+        public Guid FileId { get; set; }
         
     }
 }
