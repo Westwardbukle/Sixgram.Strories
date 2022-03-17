@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Sixgram.Stories.Database;
 
 namespace Sixgram.Stories.API
 {
@@ -26,6 +28,8 @@ namespace Sixgram.Stories.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var con = Configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<AppDbContext>(_ => _.UseNpgsql(con));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

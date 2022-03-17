@@ -10,6 +10,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Sixgram.Stories.Common\Sixgram.Stories.Common.csproj" />
+      <ProjectReference Include="..\Sixgram.Stories.Database\Sixgram.Stories.Database.csproj" />
     </ItemGroup>
 
 </Project>
