@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Sixgram.Stories.Database.Models;
+using Sixgram.Stories.Database.TablesConfiguration;
 
 namespace Sixgram.Stories.Database
 {
@@ -11,9 +12,9 @@ namespace Sixgram.Stories.Database
         {
         }
 
-        /*protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new FileModelsConfiguration());
-        }*/
+            modelBuilder.ApplyConfiguration(new StoryModelConfiguration());
+        }
     }
 }

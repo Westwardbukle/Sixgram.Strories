@@ -5,10 +5,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="TablesConfiguration" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\Sixgram.Stories.Common\Sixgram.Stories.Common.csproj" />
     </ItemGroup>
 
