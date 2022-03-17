@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixgram.Stories.API", "Sixgram.Stories.API\Sixgram.Stories.API.csproj", "{17A0BAFB-16EA-4958-8834-6F94C1ADC451}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixgram.Stories.Common", "Sixgram.Stories.Common\Sixgram.Stories.Common.csproj", "{A0737A24-F10B-42F8-A76D-E4273C99EBDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixgram.Stories.Core", "Sixgram.Stories.Core\Sixgram.Stories.Core.csproj", "{650F62A2-1704-4A5E-89F9-9B02B5EE27A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixgram.Stories.Database", "Sixgram.Stories.Database\Sixgram.Stories.Database.csproj", "{C8BCEEBD-1F25-4693-A808-619713CC0908}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17A0BAFB-16EA-4958-8834-6F94C1ADC451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17A0BAFB-16EA-4958-8834-6F94C1ADC451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17A0BAFB-16EA-4958-8834-6F94C1ADC451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17A0BAFB-16EA-4958-8834-6F94C1ADC451}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0737A24-F10B-42F8-A76D-E4273C99EBDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0737A24-F10B-42F8-A76D-E4273C99EBDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0737A24-F10B-42F8-A76D-E4273C99EBDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0737A24-F10B-42F8-A76D-E4273C99EBDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{650F62A2-1704-4A5E-89F9-9B02B5EE27A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{650F62A2-1704-4A5E-89F9-9B02B5EE27A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{650F62A2-1704-4A5E-89F9-9B02B5EE27A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{650F62A2-1704-4A5E-89F9-9B02B5EE27A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8BCEEBD-1F25-4693-A808-619713CC0908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8BCEEBD-1F25-4693-A808-619713CC0908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8BCEEBD-1F25-4693-A808-619713CC0908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8BCEEBD-1F25-4693-A808-619713CC0908}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
