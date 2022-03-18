@@ -17,7 +17,10 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Sixgram.Stories.Core.Profiles;
+using Sixgram.Stories.Core.Services;
+using Sixgram.Stories.Core.Story;
 using Sixgram.Stories.Database;
+using Sixgram.Stories.Database.Repository.Story;
 
 namespace Sixgram.Stories.API
 {
@@ -42,7 +45,9 @@ namespace Sixgram.Stories.API
             
             var con = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<AppDbContext>(_ => _.UseNpgsql(con));
-            
+
+            services.AddScoped<IStoryService, StoryService>();
+            services.AddScoped<IStoryRepository, StoryRepository>();
             
             //Configure AutoMapper Profile
             var mapperConfig = new MapperConfiguration(mc =>
@@ -123,7 +128,7 @@ namespace Sixgram.Stories.API
             
             services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1", new OpenApiInfo {Title = "Sixgramm.FileStorage.API", Version = "v1"});
+                options.SwaggerDoc("v1", new OpenApiInfo {Title = "Sixgramm.Stories.API", Version = "v1"});
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
                 {
                     In = ParameterLocation.Header,

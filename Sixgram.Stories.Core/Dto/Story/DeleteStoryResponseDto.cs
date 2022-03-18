@@ -2,7 +2,7 @@
 
 namespace Sixgram.Stories.Core.Dto.Story
 {
-    public class DeleteStoryRequestDto
+    public class DeleteStoryResponseDto
     {
         public Guid FileId { get; set; }
     }

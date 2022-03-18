@@ -9,10 +9,10 @@ namespace Sixgram.Stories.Core.Profiles
     {
         public AppProfile()
         {
-            CreateMap<StoryModel, ResultContainer<DeleteStoryRequestDto>>()
+            CreateMap<StoryModel, ResultContainer<DeleteStoryResponseDto>>()
                 .ForMember("Data", opt
                     => opt.MapFrom(p => p));
-            CreateMap<StoryModel, DeleteStoryRequestDto>();
+            CreateMap<StoryModel, DeleteStoryResponseDto>();
 
         }
     }
