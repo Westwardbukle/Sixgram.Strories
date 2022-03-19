@@ -13,6 +13,11 @@ namespace Sixgram.Stories.Core.Profiles
                 .ForMember("Data", opt
                     => opt.MapFrom(p => p));
             CreateMap<StoryModel, DeleteStoryResponseDto>();
+            
+            CreateMap<StoryModel, ResultContainer<StoryModelDto>>()
+                .ForMember("Data", opt
+                    => opt.MapFrom(p => p));
+            CreateMap<StoryModel, StoryModelDto>();
 
         }
     }

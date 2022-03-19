@@ -24,6 +24,23 @@ namespace Sixgram.Stories.Core.Services
             _mapper = mapper;
         }
 
+        public async Task<ResultContainer<StoryModelDto>> GetById(Guid storyId)
+        {
+            var result = new ResultContainer<StoryModelDto>();
+
+            var story = await _storyRepository.GetById(storyId);
+
+            if (story == null)
+            {
+                result.ErrorType = ErrorType.NotFound;
+                return result;
+            }
+
+            result = _mapper.Map<ResultContainer<StoryModelDto>>(story);
+
+            return result;
+        }
+
         public async Task<ResultContainer<DeleteStoryResponseDto>> Delete(Guid storyId)
         {
             var result = new ResultContainer<DeleteStoryResponseDto>();
