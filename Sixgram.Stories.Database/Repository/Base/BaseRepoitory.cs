@@ -30,11 +30,8 @@ namespace Sixgram.Stories.Database.Repository.Base
         public async Task<TModel> GetById(Guid id)
             => await _context.Set<TModel>().FindAsync(id);
 
-        public async Task<TModel> Delete(Guid id)
+        public async Task<TModel> Delete(TModel item)
         {
-            var item = await _context.Set<TModel>().FindAsync(id);
-            if (item == null)
-                return null;
             _context.Set<TModel>().Remove(item);
             await _context.SaveChangesAsync();
             return item;
